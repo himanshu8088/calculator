@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<title>Calculator</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="display">			
+		</div>
+
+		<form class="buttons">					
+			<div class="math-buttons">	
+				<div class="result-buttons">
+					<input onclick="onProcessingClick(this)" class="button" type="submit" name="=" value="="/>
+					<input onclick="onProcessingClick(this)" class="button" type="submit" name="C" value="C"/>
+				</div>		
+				<div class="numeric-buttons">
+					<input onclick="onNumberClick(this)" class="button" type="submit" name="1" value="1"  />
+					<input onclick="onNumberClick(this)" class="button" type="submit" name="2" value="2"/>
+					<input onclick="onNumberClick(this)" class="button" type="submit" name="3" value="3"/>
+					<input onclick="onNumberClick(this)" class="button" type="submit" name="4" value="4"/>	
+					<input onclick="onNumberClick(this)" class="button" type="submit" name="5" value="5"/>
+					<input onclick="onNumberClick(this)" class="button" type="submit" name="6" value="6"/>
+					<input onclick="onNumberClick(this)" class="button" type="submit" name="7" value="7"/>
+					<input onclick="onNumberClick(this)" class="button" type="submit" name="8" value="8"/>
+					<input onclick="onNumberClick(this)" class="button" type="submit" name="9" value="9"/>				
+					<input onclick="onNumberClick(this)" class="button" type="submit" name="0" value="0"/>	
+					<input onclick="onNumberClick(this)" class="button" type="submit" name="." value="."/>			
+				</div>																
+			</div>
+			<div class="operand-buttons">
+					<input onclick="onOperatorClick(this)" class="button" type="submit" name="+" value="+"/>
+					<input onclick="onOperatorClick(this)" class="button" type="submit" name="-" value="-"/>
+					<input onclick="onOperatorClick(this)" class="button" type="submit" name="*" value="*"/>
+					<input onclick="onOperatorClick(this)" class="button" type="submit" name="/" value="/"/>					
+			</div>
+		</form>
+
+	</div>
+
+	<script type="text/javascript" src="./js/app.js"></script>
+</body>
+</html>
