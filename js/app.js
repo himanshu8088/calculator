@@ -6,7 +6,7 @@ function onNumberClick(key){
 	if(num1==0)
 		num1=key.name;
 	else
-		num2=key.name
+		num2=key.name;
 	display(key.name);
 }
 
@@ -17,12 +17,12 @@ function onOperatorClick(key){
 
 function onProcessingClick(key){
 	if(key.name=="="){
-		num1=calculate(num1,num2,key.name);
+		num1=calculate(num1,num2,opr);
 		num2=0;
 		clear();
 		display(num1);
 	}else{
-		clear();
+		reset();
 	}
 }
 
@@ -31,16 +31,23 @@ function display(val){
 }
 
 function clear(){
-	document.getElementById("disp").innerHTML="";
+	document.getElementById("disp").innerText="";
+}
+
+function reset(){
+	clear();
+	opr='';
+	num1=0;
+	num2=0;
 }
 
 function calculate(num1,num2,operand){
 	if(operand=='+')
-		return num1+num2;
+		return parseFloat(num1)+parseFloat(num2);
 	else if((operand=='-'))
-		return num1-num2;
+		return parseFloat(num1)-parseFloat(num2);
 	else if(operand=='*')
-		return num1*num2;
+		return parseFloat(num1)*parseFloat(num2);
 	else
-		return num1/num2;
+		return parseFloat(num1)/parseFloat(num2);
 }
