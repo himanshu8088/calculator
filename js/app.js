@@ -2,9 +2,7 @@ var opr;
 var num1=0;
 var num2=0;
 
-function onNumberClick(key){
-	document.getElementById("#disp").innerHTML=key.name;
-
+function onNumberClick(key){	
 	if(num1==0)
 		num1=key.name;
 	else
@@ -29,11 +27,11 @@ function onProcessingClick(key){
 }
 
 function display(val){	
-	document.getElementById("#dis").innerText+=val;
+	document.getElementById("disp").innerText+=val;
 }
 
 function clear(){
-	document.getElementById("#dis").innerHTML="";
+	document.getElementById("disp").innerHTML="";
 }
 
 function calculate(num1,num2,operand){
